@@ -13,9 +13,10 @@ class SuperSubCatch {
         } catch (Exception e) {
             System.out.println("Generic Exception catch.");
         }
-    /* This catch is never reached because
-       ArithmeticException is a subclass of Exception. */ catch (ArithmeticException e) { // ERROR - unreachable
-            System.out.println("This is never reached.");
-        }
+//        catch (ArithmeticException e) { // ERROR - unreachable
+//                /* This catch is never reached because
+//       ArithmeticException is a subclass of Exception. */
+//            System.out.println("This is never reached.");
+//        }
     }
 }
