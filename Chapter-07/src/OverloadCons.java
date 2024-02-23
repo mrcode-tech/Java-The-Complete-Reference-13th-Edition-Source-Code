@@ -1,27 +1,27 @@
 /* Here, Box defines three constructors to initialize
    the dimensions of a box various ways.
 */
-class Box {
+class Box5 {
     double width;
     double height;
     double depth;
 
     // constructor used when all dimensions specified
-    Box(double w, double h, double d) {
+    Box5(double w, double h, double d) {
         width = w;
         height = h;
         depth = d;
     }
 
     // constructor used when no dimensions specified
-    Box() {
+    Box5() {
         width = -1;  // use -1 to indicate
         height = -1; // an uninitialized
         depth = -1;  // box
     }
 
     // constructor used when cube is created
-    Box(double len) {
+    Box5(double len) {
         width = height = depth = len;
     }
 
@@ -34,9 +34,9 @@ class Box {
 class OverloadCons {
     public static void main(String[] args) {
         // create boxes using the various constructors
-        Box mybox1 = new Box(10, 20, 15);
-        Box mybox2 = new Box();
-        Box mycube = new Box(7);
+        Box5 mybox1 = new Box5(10, 20, 15);
+        Box5 mybox2 = new Box5();
+        Box5 mycube = new Box5(7);
 
         double vol;
 

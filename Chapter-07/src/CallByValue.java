@@ -1,5 +1,5 @@
 // Simple Types are passed by value.
-class Test {
+class Test2 {
     void meth(int i, int j) {
         i *= 2;
         j /= 2;
@@ -8,7 +8,7 @@ class Test {
 
 class CallByValue {
     public static void main(String[] args) {
-        Test ob = new Test();
+        Test2 ob = new Test2();
         int a = 15, b = 20;
 
         System.out.println("a and b before call: " +

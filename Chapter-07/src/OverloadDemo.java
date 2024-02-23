@@ -1,5 +1,5 @@
 // Demonstrate method overloading.
-class OverloadDemo {
+class OverloadDemo1 {
     void test() {
         System.out.println("No parameters");
     }
@@ -23,7 +23,7 @@ class OverloadDemo {
 
 class Overload {
     public static void main(String[] args) {
-        OverloadDemo ob = new OverloadDemo();
+        OverloadDemo1 ob = new OverloadDemo1();
         double result;
 
         // call all versions of test()

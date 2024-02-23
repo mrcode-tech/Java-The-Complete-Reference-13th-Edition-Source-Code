@@ -1,15 +1,15 @@
 // Objects are passed through their references.
 
-class Test {
+class Test7 {
     int a, b;
 
-    Test(int i, int j) {
+    Test7(int i, int j) {
         a = i;
         b = j;
     }
 
     // pass an object
-    void meth(Test o) {
+    void meth(Test7 o) {
         o.a *= 2;
         o.b /= 2;
     }
@@ -17,7 +17,7 @@ class Test {
 
 class PassObjRef {
     public static void main(String[] args) {
-        Test ob = new Test(15, 20);
+        Test7 ob = new Test7(15, 20);
 
         System.out.println("ob.a and ob.b before call: " +
                 ob.a + " " + ob.b);

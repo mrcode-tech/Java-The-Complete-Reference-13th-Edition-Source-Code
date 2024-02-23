@@ -1,10 +1,10 @@
 // Improved Stack class that uses the length array member.
-class Stack {
+class Stack1 {
     private int[] stck;
     private int tos;
 
     // allocate and initialize stack
-    Stack(int size) {
+    Stack1(int size) {
         stck = new int[size];
         tos = -1;
     }
@@ -29,8 +29,8 @@ class Stack {
 
 class TestStack2 {
     public static void main(String[] args) {
-        Stack mystack1 = new Stack(5);
-        Stack mystack2 = new Stack(8);
+        Stack1 mystack1 = new Stack1(5);
+        Stack1 mystack2 = new Stack1(8);
 
         // push some numbers onto the stack
         for (int i = 0; i < 5; i++) mystack1.push(i);

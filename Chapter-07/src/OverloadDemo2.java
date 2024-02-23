@@ -1,5 +1,5 @@
 // Automatic type conversions apply to overloading.
-class OverloadDemo {
+class OverloadDemo2 {
     void test() {
         System.out.println("No parameters");
     }
@@ -15,9 +15,9 @@ class OverloadDemo {
     }
 }
 
-class Overload {
+class Overload2 {
     public static void main(String[] args) {
-        OverloadDemo ob = new OverloadDemo();
+        OverloadDemo2 ob = new OverloadDemo2();
         int i = 88;
 
         ob.test();

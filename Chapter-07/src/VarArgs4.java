@@ -31,6 +31,6 @@ class VarArgs4 {
         vaTest(1, 2, 3);  // OK
         vaTest(true, false, false); // OK
 
-        vaTest(); // Error: Ambiguous!
+//        vaTest(); // Error: Ambiguous!
     }
 }

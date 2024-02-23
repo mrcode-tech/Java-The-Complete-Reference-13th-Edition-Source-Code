@@ -1,33 +1,33 @@
 // Here, Box allows one object to initialize another.
 
-class Box {
+class Box2 {
     double width;
     double height;
     double depth;
 
     // construct clone of an object
-    Box(Box ob) { // pass object to constructor
+    Box2(Box2 ob) { // pass object to constructor
         width = ob.width;
         height = ob.height;
         depth = ob.depth;
     }
 
     // constructor used when all dimensions specified
-    Box(double w, double h, double d) {
+    Box2(double w, double h, double d) {
         width = w;
         height = h;
         depth = d;
     }
 
     // constructor used when no dimensions specified
-    Box() {
+    Box2() {
         width = -1;  // use -1 to indicate
         height = -1; // an uninitialized
         depth = -1;  // box
     }
 
     // constructor used when cube is created
-    Box(double len) {
+    Box2(double len) {
         width = height = depth = len;
     }
 
@@ -40,11 +40,11 @@ class Box {
 class OverloadCons2 {
     public static void main(String[] args) {
         // create boxes using the various constructors
-        Box mybox1 = new Box(10, 20, 15);
-        Box mybox2 = new Box();
-        Box mycube = new Box(7);
+        Box2 mybox1 = new Box2(10, 20, 15);
+        Box2 mybox2 = new Box2();
+        Box2 mycube = new Box2(7);
 
-        Box myclone = new Box(mybox1);
+        Box2 myclone = new Box2(mybox1);
 
         double vol;
 

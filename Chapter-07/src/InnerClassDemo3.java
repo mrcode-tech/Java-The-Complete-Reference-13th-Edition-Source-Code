@@ -1,5 +1,5 @@
 // Define an inner class within a for loop.
-class Outer {
+class Outer3 {
     int outer_x = 100;
 
     void test() {
@@ -15,9 +15,9 @@ class Outer {
     }
 }
 
-class InnerClassDemo {
+class InnerClassDemo3 {
     public static void main(String[] args) {
-        Outer outer = new Outer();
+        Outer3 outer = new Outer3();
         outer.test();
     }
 }
