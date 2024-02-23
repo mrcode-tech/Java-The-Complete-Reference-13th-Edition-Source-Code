@@ -1,6 +1,6 @@
 // This program includes a method inside the box class.
 
-class Box {
+class Box5 {
     double width;
     double height;
     double depth;
@@ -14,8 +14,8 @@ class Box {
 
 class BoxDemo3 {
     public static void main(String[] args) {
-        Box mybox1 = new Box();
-        Box mybox2 = new Box();
+        Box5 mybox1 = new Box5();
+        Box5 mybox2 = new Box5();
 
         // assign values to mybox1's instance variables
         mybox1.width = 10;

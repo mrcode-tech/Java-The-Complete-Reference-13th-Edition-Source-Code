@@ -2,7 +2,7 @@
 
    Call this file BoxDemo.java
 */
-class Box {
+class Box3 {
     double width;
     double height;
     double depth;
@@ -12,7 +12,7 @@ class Box {
 class BoxDemo {
 
     public static void main(String[] args) {
-        Box mybox = new Box();
+        Box3 mybox = new Box3();
         double vol;
 
         // assign values to mybox's instance variables

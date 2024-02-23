@@ -1,13 +1,13 @@
 /* Here, Box uses a constructor to initialize the
    dimensions of a box.
 */
-class Box {
+class Box8 {
     double width;
     double height;
     double depth;
 
     // This is the constructor for Box.
-    Box() {
+    Box8() {
         System.out.println("Constructing Box");
         width = 10;
         height = 10;
@@ -23,8 +23,8 @@ class Box {
 class BoxDemo6 {
     public static void main(String[] args) {
         // declare, allocate, and initialize Box objects
-        Box mybox1 = new Box();
-        Box mybox2 = new Box();
+        Box8 mybox1 = new Box8();
+        Box8 mybox2 = new Box8();
 
         double vol;
 
