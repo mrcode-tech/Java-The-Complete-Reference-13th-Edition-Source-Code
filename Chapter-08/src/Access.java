@@ -6,7 +6,7 @@
 */
 
 // Create a superclass.
-class A {
+class A2 {
     int i; // default access
     private int j; // private to A
 
@@ -17,21 +17,21 @@ class A {
 }
 
 // A's j is not accessible here.
-class B extends A {
+class B2 extends A2 {
     int total;
 
-    void sum() {
-        total = i + j; // ERROR, j is not accessible here
-    }
+//    void sum() {
+//        total = i + j; // ERROR, j is not accessible here
+//    }
 }
 
 class Access {
     public static void main(String[] args) {
-        B subOb = new B();
+        B2 subOb = new B2();
 
         subOb.setij(10, 12);
 
-        subOb.sum();
+//        subOb.sum();
         System.out.println("Total is " + subOb.total);
     }
 }
