@@ -1,10 +1,10 @@
 // Suspending and resuming a thread the modern way.
-class NewThread implements Runnable {
+class NewThread3 implements Runnable {
     String name; // name of thread
     Thread t;
     boolean suspendFlag;
 
-    NewThread(String threadname) {
+    NewThread3(String threadname) {
         name = threadname;
         t = new Thread(this, name);
         System.out.println("New thread: " + t);
@@ -41,8 +41,8 @@ class NewThread implements Runnable {
 
 class SuspendResume {
     public static void main(String[] args) {
-        NewThread ob1 = new NewThread("One");
-        NewThread ob2 = new NewThread("Two");
+        NewThread3 ob1 = new NewThread3("One");
+        NewThread3 ob2 = new NewThread3("Two");
 
         // Start the threads.
         ob1.t.start();

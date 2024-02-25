@@ -1,7 +1,7 @@
 // Create a second thread by extending Thread
-class NewThread extends Thread {
+class NewThread1 extends Thread {
 
-    NewThread() {
+    NewThread1() {
         // Create a new, second thread
         super("Demo Thread");
         System.out.println("Child thread: " + this);
@@ -24,7 +24,7 @@ class NewThread extends Thread {
 
 class ExtendThread {
     public static void main(String[] args) {
-        NewThread nt = new NewThread(); // create a new thread
+        NewThread1 nt = new NewThread1(); // create a new thread
 
         nt.start(); // start the thread
 

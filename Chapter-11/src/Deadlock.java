@@ -36,7 +36,7 @@ class B {
     }
 
     synchronized void last() {
-        System.out.println("Inside A.last");
+        System.out.println("Inside B.last");
     }
 }
 

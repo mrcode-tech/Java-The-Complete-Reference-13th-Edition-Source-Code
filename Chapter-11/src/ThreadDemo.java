@@ -1,8 +1,8 @@
 // Create a second thread.
-class NewThread implements Runnable {
+class NewThread4 implements Runnable {
     Thread t;
 
-    NewThread() {
+    NewThread4() {
         // Create a new, second thread
         t = new Thread(this, "Demo Thread");
         System.out.println("Child thread: " + t);
@@ -24,7 +24,7 @@ class NewThread implements Runnable {
 
 class ThreadDemo {
     public static void main(String[] args) {
-        NewThread nt = new NewThread(); // create a new thread
+        NewThread4 nt = new NewThread4(); // create a new thread
 
         nt.t.start(); // Start the thread
 

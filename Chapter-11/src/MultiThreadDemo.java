@@ -1,9 +1,9 @@
 // Create multiple threads.
-class NewThread implements Runnable {
+class NewThread2 implements Runnable {
     String name; // name of thread
     Thread t;
 
-    NewThread(String threadname) {
+    NewThread2(String threadname) {
         name = threadname;
         t = new Thread(this, name);
         System.out.println("New thread: " + t);
@@ -26,9 +26,9 @@ class NewThread implements Runnable {
 
 class MultiThreadDemo {
     public static void main(String[] args) {
-        NewThread nt1 = new NewThread("One");
-        NewThread nt2 = new NewThread("Two");
-        NewThread nt3 = new NewThread("Three");
+        NewThread2 nt1 = new NewThread2("One");
+        NewThread2 nt2 = new NewThread2("Two");
+        NewThread2 nt3 = new NewThread2("Three");
 
         // Start the threads.
         nt1.t.start();

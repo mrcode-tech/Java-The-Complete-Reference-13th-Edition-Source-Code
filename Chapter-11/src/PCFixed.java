@@ -1,5 +1,5 @@
 // A correct implementation of a producer and consumer.
-class Q {
+class Q1 {
     int n;
     boolean valueSet = false;
 
@@ -33,11 +33,11 @@ class Q {
     }
 }
 
-class Producer implements Runnable {
-    Q q;
+class Producer1 implements Runnable {
+    Q1 q;
     Thread t;
 
-    Producer(Q q) {
+    Producer1(Q1 q) {
         this.q = q;
         t = new Thread(this, "Producer");
     }
@@ -51,11 +51,11 @@ class Producer implements Runnable {
     }
 }
 
-class Consumer implements Runnable {
-    Q q;
+class Consumer2 implements Runnable {
+    Q1 q;
     Thread t;
 
-    Consumer(Q q) {
+    Consumer2(Q1 q) {
         this.q = q;
         t = new Thread(this, "Consumer");
     }
@@ -70,9 +70,9 @@ class Consumer implements Runnable {
 
 class PCFixed {
     public static void main(String[] args) {
-        Q q = new Q();
-        Producer p = new Producer(q);
-        Consumer c = new Consumer(q);
+        Q1 q = new Q1();
+        Producer1 p = new Producer1(q);
+        Consumer2 c = new Consumer2(q);
 
         // Start the threads.
         p.t.start();

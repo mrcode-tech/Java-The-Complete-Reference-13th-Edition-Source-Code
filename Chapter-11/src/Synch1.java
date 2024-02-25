@@ -1,6 +1,6 @@
-// This program uses a synchronized block.
-class Callme {
-    void call(String msg) {
+class Callme1 {
+    synchronized void call(String msg) {
+//    void call(String msg) {
         System.out.print("[" + msg);
         try {
             Thread.sleep(1000);
@@ -11,12 +11,12 @@ class Callme {
     }
 }
 
-class Caller implements Runnable {
+class Caller1 implements Runnable {
     String msg;
-    Callme target;
+    Callme1 target;
     Thread t;
 
-    public Caller(Callme targ, String s) {
+    public Caller1(Callme1 targ, String s) {
         target = targ;
         msg = s;
         t = new Thread(this);
@@ -32,10 +32,10 @@ class Caller implements Runnable {
 
 class Synch1 {
     public static void main(String[] args) {
-        Callme target = new Callme();
-        Caller ob1 = new Caller(target, "Hello");
-        Caller ob2 = new Caller(target, "Synchronized");
-        Caller ob3 = new Caller(target, "World");
+        Callme1 target = new Callme1();
+        Caller1 ob1 = new Caller1(target, "Hello");
+        Caller1 ob2 = new Caller1(target, "Synchronized");
+        Caller1 ob3 = new Caller1(target, "World");
 
         // Start the threads.
         ob1.t.start();
