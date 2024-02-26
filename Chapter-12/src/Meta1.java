@@ -3,18 +3,18 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Method;
 
 @Retention(RetentionPolicy.RUNTIME)
-@interface MyAnno {
+@interface MyAnno0 {
     String str();
 
     int val();
 }
 
-class Meta {
+class Meta0 {
 
     // myMeth now has two arguments.
     @MyAnno(str = "Two Parameters", val = 19)
     public static void myMeth(String str, int i) {
-        Meta ob = new Meta();
+        Meta0 ob = new Meta0();
 
         try {
             Class<?> c = ob.getClass();

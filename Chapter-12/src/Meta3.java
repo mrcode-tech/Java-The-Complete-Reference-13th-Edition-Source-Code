@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 
 // An annotation type declaration that includes defaults.
 @Retention(RetentionPolicy.RUNTIME)
-@interface MyAnno {
+@interface MyAnno2 {
     String str() default "Testing";
 
     int val() default 9000;
@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 class Meta3 {
 
     // Annotate a method using the default values.
-    @MyAnno()
+    @MyAnno2()
     public static void myMeth() {
         Meta3 ob = new Meta3();
 

@@ -6,22 +6,22 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.reflect.Method;
 
 @Retention(RetentionPolicy.RUNTIME)
-@interface MyAnno {
+@interface MyAnno1 {
     String str();
 
     int val();
 }
 
 @Retention(RetentionPolicy.RUNTIME)
-@interface What {
+@interface What1 {
     String description();
 }
 
-@What(description = "An annotation test class")
+@What1(description = "An annotation test class")
 @MyAnno(str = "Meta2", val = 99)
 class Meta2 {
 
-    @What(description = "An annotation test method")
+    @What1(description = "An annotation test method")
     @MyAnno(str = "Testing", val = 100)
     public static void myMeth() {
         Meta2 ob = new Meta2();

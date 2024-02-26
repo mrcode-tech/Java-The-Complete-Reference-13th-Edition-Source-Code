@@ -1,22 +1,22 @@
 // An enumeration of apple varieties.
-enum Apple {
+enum Apple1 {
     Jonathan, GoldenDel, RedDel, Winesap, Cortland
 }
 
 class EnumDemo {
     public static void main(String[] args) {
-        Apple ap;
+        Apple1 ap;
 
-        ap = Apple.RedDel;
+        ap = Apple1.RedDel;
 
         // Output an enum value.
         System.out.println("Value of ap: " + ap);
         System.out.println();
 
-        ap = Apple.GoldenDel;
+        ap = Apple1.GoldenDel;
 
         // Compare two enum values.
-        if (ap == Apple.GoldenDel)
+        if (ap == Apple1.GoldenDel)
             System.out.println("ap contains GoldenDel.\n");
 
         // Use an enum to control a switch statement.
