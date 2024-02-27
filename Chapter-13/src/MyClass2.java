@@ -1,20 +1,20 @@
-class MyClass {
+class MyClass1 {
     int a;
     int b;
 
     // initialize a and b individually
-    MyClass(int i, int j) {
+    MyClass1(int i, int j) {
         a = i;
         b = j;
     }
 
     // initialize a and b to the same value
-    MyClass(int i) {
+    MyClass1(int i) {
         this(i, i); // invokes MyClass(i, i)
     }
 
     // give a and b default values of 0
-    MyClass() {
+    MyClass1() {
         this(0); // invokes MyClass(0)
     }
 }

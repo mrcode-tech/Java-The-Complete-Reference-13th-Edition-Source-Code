@@ -10,6 +10,10 @@ class AssertDemo {
     public static void main(String[] args) {
         int n;
 
+        //To enable assertion checking at run time, you must specify the -ea option.
+        //For example, to enable assertions for AssertDemo, execute it using this
+        //line:
+        //java -ea AssertDemo
         for (int i = 0; i < 10; i++) {
             n = getnum();
 
