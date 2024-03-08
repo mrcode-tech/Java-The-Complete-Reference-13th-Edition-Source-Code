@@ -1,8 +1,8 @@
 // A simple generic class hierarchy. 
-class Gen<T> {
+class Gen_0<T> {
     T ob;
 
-    Gen(T o) {
+    Gen_0(T o) {
         ob = o;
     }
 
@@ -13,8 +13,8 @@ class Gen<T> {
 }
 
 // A subclass of Gen. 
-class Gen2<T> extends Gen<T> {
-    Gen2(T o) {
+class Gen_00<T> extends Gen_0<T> {
+    Gen_00(T o) {
         super(o);
     }
 }

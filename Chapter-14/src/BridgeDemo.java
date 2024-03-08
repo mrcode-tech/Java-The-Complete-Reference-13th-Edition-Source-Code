@@ -1,10 +1,10 @@
 // A situation that creates a bridge method.
-class Gen<T> {
+class Gen_1<T> {
     T ob; // declare an object of type T
 
     // Pass the constructor a reference to
     // an object of type T.
-    Gen(T o) {
+    Gen_1(T o) {
         ob = o;
     }
 
@@ -15,9 +15,9 @@ class Gen<T> {
 }
 
 // A subclass of Gen.
-class Gen2 extends Gen<String> {
+class Gen_2 extends Gen_1<String> {
 
-    Gen2(String o) {
+    Gen_2(String o) {
         super(o);
     }
 
@@ -33,7 +33,7 @@ class BridgeDemo {
     public static void main(String[] args) {
 
         // Create a Gen2 object for Strings.
-        Gen2 strOb2 = new Gen2("Generics Test");
+        Gen_2 strOb2 = new Gen_2("Generics Test");
 
         System.out.println(strOb2.getOb());
     }

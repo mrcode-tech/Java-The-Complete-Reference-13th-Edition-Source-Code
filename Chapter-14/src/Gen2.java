@@ -1,8 +1,8 @@
 // Can't create an instance of T.
-class Gen<T> {
+class Gen3<T> {
     T ob;
 
-    Gen() {
-        ob = new T(); // Illegal!!!
+    Gen3() {
+//        ob = new T(); // Illegal!!!
     }
 }

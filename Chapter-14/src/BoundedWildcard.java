@@ -58,6 +58,15 @@ class BoundedWildcard {
         System.out.println();
     }
 
+    /**
+     * In general, to establish an upper bound for a wildcard, use the following type of
+     * wildcard expression:
+     * <? extends superclass>
+     * where superclass is the name of the class that serves as the upper bound. Remember, this is
+     * an inclusive clause because the class forming the upper bound (that is, specified by superclass)
+     * is also within bounds.
+     */
+
     static void showAll(Coords<? extends FourD> c) {
         System.out.println("X Y Z T Coordinates:");
         for (int i = 0; i < c.coords.length; i++)
@@ -65,6 +74,25 @@ class BoundedWildcard {
                     c.coords[i].y + " " +
                     c.coords[i].z + " " +
                     c.coords[i].t);
+        System.out.println();
+    }
+
+    /**
+     * You can also specify a lower bound for a wildcard by adding a super clause to a wildcard
+     * declaration. Here is its general form:
+     * <? super subclass>
+     * In this case, only classes
+     *
+     *
+     */
+    static void showAllLowerBound(Coords<? super ThreeD> c) {
+        System.out.println("X Y Z T Coordinates:");
+        for (int i = 0; i < c.coords.length; i++)
+            System.out.println(c.coords[i].x + " "
+                    + c.coords[i].y + " "
+//                    + c.coords[i].z + " "
+//                    + c.coords[i].t
+                    );
         System.out.println();
     }
 
@@ -80,8 +108,8 @@ class BoundedWildcard {
 
         System.out.println("Contents of tdlocs.");
         showXY(tdlocs); // OK, is a TwoD
-//  showXYZ(tdlocs); // Error, not a ThreeD 
-//  showAll(tdlocs); // Error, not a FourD 
+//  showXYZ(tdlocs); // Error, not a ThreeD
+//  showAll(tdlocs); // Error, not a FourD
 
         // Now, create some FourD objects.
         FourD[] fd = {

@@ -1,10 +1,10 @@
 // Overriding a generic method in a generic class.
-class Gen<T> {
+class Gen_0000<T> {
     T ob; // declare an object of type T
 
     // Pass the constructor a reference to
     // an object of type T.
-    Gen(T o) {
+    Gen_0000(T o) {
         ob = o;
     }
 
@@ -16,9 +16,9 @@ class Gen<T> {
 }
 
 // A subclass of Gen that overrides getOb().
-class Gen2<T> extends Gen<T> {
+class Gen_0002<T> extends Gen_0000<T> {
 
-    Gen2(T o) {
+    Gen_0002(T o) {
         super(o);
     }
 
@@ -34,13 +34,13 @@ class OverrideDemo {
     public static void main(String[] args) {
 
         // Create a Gen object for Integers.
-        Gen<Integer> iOb = new Gen<Integer>(88);
+        Gen_0000<Integer> iOb = new Gen_0000<Integer>(88);
 
         // Create a Gen2 object for Integers.
-        Gen2<Integer> iOb2 = new Gen2<Integer>(99);
+        Gen_0002<Integer> iOb2 = new Gen_0002<Integer>(99);
 
         // Create a Gen2 object for Strings.
-        Gen2<String> strOb2 = new Gen2<String>("Generics Test");
+        Gen_0002<String> strOb2 = new Gen_0002<String>("Generics Test");
 
         System.out.println(iOb.getOb());
         System.out.println(iOb2.getOb());

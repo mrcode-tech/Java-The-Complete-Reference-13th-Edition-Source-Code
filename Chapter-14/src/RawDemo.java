@@ -1,10 +1,10 @@
 // Demonstrate a raw type.
-class Gen<T> {
+class Gen6<T> {
     T ob; // declare an object of type T
 
     // Pass the constructor a reference to
     // an object of type T.
-    Gen(T o) {
+    Gen6(T o) {
         ob = o;
     }
 
@@ -19,14 +19,14 @@ class RawDemo {
     public static void main(String[] args) {
 
         // Create a Gen object for Integers.
-        Gen<Integer> iOb = new Gen<Integer>(88);
+        Gen6<Integer> iOb = new Gen6<Integer>(88);
 
         // Create a Gen object for Strings.
-        Gen<String> strOb = new Gen<String>("Generics Test");
+        Gen6<String> strOb = new Gen6<String>("Generics Test");
 
         // Create a raw-type Gen object and give it
         // a Double value.
-        Gen raw = new Gen(Double.valueOf(98.6));
+        Gen6 raw = new Gen6(Double.valueOf(98.6));
 
         // Cast here is necessary because type is unknown.
         double d = (Double) raw.getOb();

@@ -2,10 +2,10 @@
 // of a generic subclass.
 
 // A nongeneric class.
-class NonGen {
+class NonGen1 {
     int num;
 
-    NonGen(int i) {
+    NonGen1(int i) {
         num = i;
     }
 
@@ -15,12 +15,12 @@ class NonGen {
 }
 
 // A generic subclass.
-class Gen<T> extends NonGen {
+class Gen_10<T> extends NonGen1 {
     T ob; // declare an object of type T
 
     // Pass the constructor a reference to
     // an object of type T.
-    Gen(T o, int i) {
+    Gen_10(T o, int i) {
         super(i);
         ob = o;
     }
@@ -36,7 +36,7 @@ class HierDemo2 {
     public static void main(String[] args) {
 
         // Create a Gen object for String.
-        Gen<String> w = new Gen<String>("Hello", 47);
+        Gen_10<String> w = new Gen_10<String>("Hello", 47);
 
         System.out.print(w.getOb() + " ");
         System.out.println(w.getnum());
