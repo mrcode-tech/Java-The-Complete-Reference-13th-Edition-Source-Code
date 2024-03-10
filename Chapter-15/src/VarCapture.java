@@ -1,15 +1,16 @@
 // An example of capturing a local variable from the enclosing scope.
 
-interface MyFunc {
+interface MyFunc1 {
     int func(int n);
 }
 
 class VarCapture {
+    
     public static void main(String[] args) {
         // A local variable that can be captured.
         int num = 10;
 
-        MyFunc myLambda = (n) -> {
+        MyFunc1 myLambda = (n) -> {
             // This use of num is OK. It does not modify num.
             int v = num + n;
 

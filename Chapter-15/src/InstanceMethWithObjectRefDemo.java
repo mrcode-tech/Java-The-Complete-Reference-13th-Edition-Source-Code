@@ -2,7 +2,7 @@
 
 // A functional interface that takes two reference arguments
 // and returns a boolean result.
-interface MyFunc<T> {
+interface MyFunc6<T> {
     boolean func(T v1, T v2);
 }
 
@@ -32,7 +32,7 @@ class InstanceMethWithObjectRefDemo {
     // A method that returns the number of occurences
     // of an object for which some criteria, as specified by
     // the MyFunc parameter, is true.
-    static <T> int counter(T[] vals, MyFunc<T> f, T v) {
+    static <T> int counter(T[] vals, MyFunc6<T> f, T v) {
         int count = 0;
 
         for (int i = 0; i < vals.length; i++)

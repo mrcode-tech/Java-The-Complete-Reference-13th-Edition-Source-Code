@@ -1,20 +1,20 @@
 // Demonstrate a constructor reference with a generic class.
 
 // MyFunc is now a generic functional interface.
-interface MyFunc<T> {
-    MyClass<T> func(T n);
+interface MyFunc2<T> {
+    MyClass2<T> func(T n);
 }
 
-class MyClass<T> {
+class MyClass2<T> {
     private T val;
 
     // A constructor that takes an argument.
-    MyClass(T v) {
+    MyClass2(T v) {
         val = v;
     }
 
     // This is the default constructor.
-    MyClass() {
+    MyClass2() {
         val = null;
     }
 
@@ -31,10 +31,10 @@ class ConstructorRefDemo2 {
 
     public static void main(String[] args) {
         // Create a reference to the MyClass<T> constructor.
-        MyFunc<Integer> myClassCons = MyClass<Integer>::new;
+        MyFunc2<Integer> myClassCons = MyClass2<Integer>::new;
 
         // Create an instance of MyClass<T> via that constructor reference.
-        MyClass<Integer> mc = myClassCons.func(100);
+        MyClass2<Integer> mc = myClassCons.func(100);
 
         // Use the instance of MyClass<T> just created.
         System.out.println("val in mc is " + mc.getVal());

@@ -1,6 +1,6 @@
 // Use lambda expressions as an argument to a method.
 
-interface StringFunc {
+interface StringFunc8 {
     String func(String n);
 }
 
@@ -11,7 +11,7 @@ class LambdasAsArgumentsDemo {
     // any instance of that interface, including the instance created
     // by a lambda expression.
     // The second parameter specifies the string to operate on.
-    static String stringOp(StringFunc sf, String s) {
+    static String stringOp(StringFunc8 sf, String s) {
         return sf.func(s);
     }
 
@@ -41,11 +41,11 @@ class LambdasAsArgumentsDemo {
         System.out.println("The string with spaces removed: " + outStr);
 
 
-        // Of course, it is also possible to pass a StringFunc instance
+        // Of course, it is also possible to pass a StringFunc8 instance
         // created by an earlier lambda expression. For example,
         // after this declaration executes, reverse refers to a
-        // synthetic instance of StringFunc.
-        StringFunc reverse = (str) -> {
+        // synthetic instance of StringFunc8.
+        StringFunc8 reverse = (str) -> {
             String result = "";
             int i;
 
@@ -56,7 +56,7 @@ class LambdasAsArgumentsDemo {
         };
 
         // Now, reverse can be passed as the first parameter to stringOp()
-        // since it refers to a StringFunc object.
+        // since it refers to a StringFunc8 object.
         System.out.println("The string reversed: " +
                 stringOp(reverse, inStr));
     }
