@@ -4,13 +4,13 @@
 // that returns only the last name of the name component.
 // It also includes the version of the compact constructor that
 // checks for the conventional lastname, firstname format.
-record Employee(String name, int idNum) {
+record Employee3(String name, int idNum) {
 
     // Use a compact canonical constructor to remove any leading
     // and trailing spaces in the name component. Also perform
     // a basic check that the required format of lastname, firstname.
     // is passed to the name parameter.
-    public Employee {
+    public Employee3 {
         // Remove any leading and trailing spaces.
         name = name.trim();
 
@@ -39,7 +39,7 @@ record Employee(String name, int idNum) {
 
 class RecordDemo4 {
     public static void main(String[] args) {
-        Employee emp = new Employee("Jones, Robert", 1048);
+        Employee3 emp = new Employee3("Jones, Robert", 1048);
 
         // Display the name component unmodified.
         System.out.println("Employee full name is " + emp.name());

@@ -11,5 +11,22 @@ public class InstanceOfDemo {
             System.out.println("Number less than 1000");
         }
 
+        //Pattern Matching in Other Statements
+        Object[] someObjs = {
+                new String("Alpha"),
+                new String("Beta"),
+                Integer.valueOf(10),
+                new String("Omega")
+
+        };
+
+        int i;
+        // This loop iterates until an element is not a String, or the end
+        // of the array is reached.
+        for(i = 0; (someObjs[i] instanceof String str) && (i < someObjs.length); i++) {
+            System.out.println("Processing " + str);
+            // ...
+        }
+
     }
 }
