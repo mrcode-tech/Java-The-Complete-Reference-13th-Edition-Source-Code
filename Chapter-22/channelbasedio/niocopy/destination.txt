@@ -1,2 +1,0 @@
-Hello everybody!
-We are learning Java NIO API.
