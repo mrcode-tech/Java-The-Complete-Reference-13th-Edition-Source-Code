@@ -9,5 +9,7 @@ class Angles {
         theta = 1.312;
         System.out.println(theta + " radians is " +
                 Math.toDegrees(theta) + " degrees.");
+
+
     }
 }

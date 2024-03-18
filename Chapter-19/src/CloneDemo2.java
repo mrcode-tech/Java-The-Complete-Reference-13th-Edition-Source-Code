@@ -1,6 +1,6 @@
 // Override the clone() method.
 
-class TestClone implements Cloneable {
+class TestClone1 implements Cloneable {
     int a;
     double b;
 
@@ -19,14 +19,14 @@ class TestClone implements Cloneable {
 
 class CloneDemo2 {
     public static void main(String[] args) {
-        TestClone x1 = new TestClone();
-        TestClone x2;
+        TestClone1 x1 = new TestClone1();
+        TestClone1 x2;
 
         x1.a = 10;
         x1.b = 20.98;
 
         // here, clone() is called directly.
-        x2 = (TestClone) x1.clone();
+        x2 = (TestClone1) x1.clone();
 
         System.out.println("x1: " + x1.a + " " + x1.b);
         System.out.println("x2: " + x2.a + " " + x2.b);
